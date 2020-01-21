@@ -165,7 +165,8 @@ instructions to get setup for development.</p>
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>It is recommended to develop inside of an <a class="reference external" href="https://www.continuum.io/">anaconda</a>
 virtual environment. These instructions are for setting up for development within a
-<code class="docutils literal notranslate"><span class="pre">conda</span></code> env, see <a class="reference external" href="https://www.anaconda.com/distribution/#download-section">installation instructions</a>.</p>
+<code class="docutils literal notranslate"><span class="pre">conda</span></code> env, see <a class="reference external" href="https://www.anaconda.com/distribution/#download-section">installation instructions</a> for anaconda,
+download and install the python 3 version.</p>
 <ol class="arabic">
 <li><p>Clone the repo:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/jorshi/spiegel
@@ -204,7 +205,7 @@ $ conda env create -f spiegel-env.yml
 <div><p><a class="reference external" href="https://github.com/fedden/RenderMan">librenderman</a> is a python library for programmatically interacting with VST synthesizers.
 It uses <a class="reference external" href="https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html">boost-python</a> to wrap
 a <a class="reference external" href="https://juce.com/">JUCE</a> application. Getting it running inside of a <code class="docutils literal notranslate"><span class="pre">conda</span></code> env is not the most
-straightforward thing and hopefully we can work to get it packaged in anaconda at some point.</p>
+straightforward thing and hopefully we can work to get it packaged in anaconda at some point. But, for now:</p>
 <ol class="loweralpha">
 <li><p><a class="reference external" href="https://shop.juce.com/get-juce">Download and install JUCE</a></p></li>
 <li><p>If you haven’t already, move out of the <em>spiegel</em> project directory to somewhere you would like to download librenderman</p></li>
@@ -223,7 +224,7 @@ $ open RenderMan-py36.jucer
 </li>
 <li><p>Update Xcode exporter</p>
 <blockquote>
-<div><p>For the Xcode (MacOSX) exporter modify the <em>Extra Linker Flags</em>: remove <code class="docutils literal notranslate"><span class="pre">-lpython2.7</span></code>
+<div><p>For the Xcode (MacOSX) exporter modify the <em>Extra Linker Flags</em>: remove <code class="docutils literal notranslate"><span class="pre">-lpython3.6m</span></code>
 Change <code class="docutils literal notranslate"><span class="pre">-lboost-python</span></code> to <code class="docutils literal notranslate"><span class="pre">-lboost-python37</span></code> and add <code class="docutils literal notranslate"><span class="pre">-undefined</span> <span class="pre">dynamic_lookup</span></code></p>
 <img alt="_images/linker_flags.png" src="_images/linker_flags.png" />
 </div></blockquote>
